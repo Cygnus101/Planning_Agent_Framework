@@ -1,0 +1,12 @@
+redescribe_subtask_prompt = '''
+Rewrite the following sentence based on the given example, while keeping the key information unchanged. Besides, output the rewritten sentence in the form like ***rewritten***.
+---
+Here is an example:
+Example sentence: 'Determine the population of the United States in 2022.'
+Sentence to be rewritten: 'Assess the population of China in 2022.'
+Rewritten sentence: 'Determine the population of China in 2022.'
+Output: ***'Determine the population of China in 2022.'***
+---
+Example sentence: %s
+Sentence to be rewritten: %s
+'''

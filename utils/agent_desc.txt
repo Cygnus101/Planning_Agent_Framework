@@ -1,0 +1,4 @@
+code_agent: Generate code in Python for precise computations to solve the given task
+math_agent: Answer math questions by reasoning step-by-step. 
+search_agent: Call Google Search API to obtain information regarding the given task. 
+commonsense_agent: Answer the given question using commonsense reasoning.

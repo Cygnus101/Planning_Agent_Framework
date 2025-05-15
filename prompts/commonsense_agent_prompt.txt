@@ -1,0 +1,6 @@
+commonsense_agent_prompt = '''You are a commonsense agent. You can answer the given question with logical reasoning, basic math and commonsense knowledge.
+---
+task: %s
+History: %s
+Solution: 
+'''

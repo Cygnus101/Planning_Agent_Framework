@@ -1,0 +1,7 @@
+[
+  {
+    "agent": "code_agent",
+    "task": "Provide Python code to use sentence transformer on the sentence 'Hello World'.",
+    "output": "```python\nfrom sentence_transformers import SentenceTransformer\n\n# Load the SentenceTransformer model\nmodel = SentenceTransformer('all-mpnet-base-v2')  # You can choose different models\n\n# The sentence to encode\nsentence = 'Hello World'\n\n# Generate the sentence embedding\nembedding = model.encode(sentence)\n\n# Print the embedding\nprint(embedding)\n```"
+  }
+]

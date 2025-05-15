@@ -1,0 +1,12 @@
+[
+  {
+    "task": "Provide Python code to use sentence transformer on the sentence 'Hello World'.",
+    "id": 1,
+    "name": "code_agent",
+    "reason": "The code_agent is best suited to generate Python code for using sentence transformers.",
+    "dep": [],
+    "similarity": 0.5646163821220398,
+    "llm_score": 4.0,
+    "action": "accept"
+  }
+]

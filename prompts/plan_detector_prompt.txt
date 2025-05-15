@@ -1,0 +1,15 @@
+plan_detector_prompt = '''
+You are a plan detector responsible for analyzing the completeness and redundancy of the plan. Given the query and the plan formulated to solve the query, which involves several sub-tasks, you should do the following things:
+1. **Detect whether the plan satisfies the completeness.**: Evaluate whether the set of subtasks covers all key aspects of the original task including important numbers and nouns. Specifically, check if each important element and requirement from the original task is addressed by at least one subtask. Provide a brief explanation if any key information is missing.
+2. **Detect whether the plan satisfies the non-redundancy.**: Evaluate whether any two sub-tasks contain identical information and requirements. If there is any redundant part, list and provide suggestions for optimizing the plan.
+---
+For example:
+Task: If a plane can carry 300 passengers and flies from Brazil to Nigeria with a full load, then returns with only 75% capacity filled, how many passengers in total has it transported between the two countries in one round trip?
+Subtask 1: Determine the number of passengers transported from Brazil to Nigeria in one flight with a full load.    Dependency: []
+Subtask 2: Determine the number of passengers transported from Nigeria to Brazil in one flight with 75% capacity filled.    Dependency: []
+Subtask 3: Calculate the total number of passengers transported between Brazil and Nigeria in one round trip.    Dependency: [1, 2]
+Analyse: This plan does not satisfy completeness because the subtask loses the information of 'a plane can carry 300 passengers' of the original task. This plan satisfies non-redundancy because each subtask has a unique focus and there is no overlap in the information covered.
+Suggestions: Add the information of 'a plane can carry 300 passengers' to subtask 1 and subtask 2.
+---
+If there is no need to modify the plan, just return 'The plan satisfies completeness and non-redundancy.'.
+'''
